@@ -72,6 +72,35 @@ namespace Search
                 ch = char.Parse(Console.ReadLine());
             } while ((ch == 'y') || (ch == 'Y'));
         }
+        
+        public void LinearSearch()
+        {
+            char ch;
+            //search for number of comparison
+            int ctr;
+            do
+            {
+                //accept the number to be searched
+                Console.Write("\nEnter the element you want to search: ");
+                int item = Convert.ToInt32(Console.ReadLine());
+
+                ctr = 0;
+                for (i = 0; i < n; i++)
+                {
+                    ctr++;
+                    if (arr[1] == item)
+                    {
+                        Console.WriteLine("\n" + item.ToString() + "found in position" + (i + 1).ToString());
+                        break;
+                    }
+                }
+                if (i == n)
+                    Console.WriteLine("\n" + item.ToString() + "Not found in the array");
+                Console.WriteLine("\nNumber of Comparison: " + ctr);
+                Console.Write("\nContinue Search (y/n):");
+                ch = char.Parse(Console.ReadLine());
+            } while ((ch == 'y') || (ch == 'Y'));
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
